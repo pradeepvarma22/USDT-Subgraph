@@ -1,10 +1,22 @@
 # USDT-Subgraph
 
 
-Deployed:
+Subgraph Deployed At:
 <a href="https://thegraph.com/hosted-service/subgraph/pradeepvarma22/usdt">https://thegraph.com/hosted-service/subgraph/pradeepvarma22/usdt</a>
 
 
+App Url:<a href="https://usdt-subgraph.vercel.app/">
+https://usdt-subgraph.vercel.app</a>
+
+<br/>
+
+## Images
+<img src="./assets/1.png" />
+<br/>
+<img src="./assets/2.png">
+<br/>
+<img src="./assets/3.png"/>
+<br/>
 ##### Ex Query:
 <pre>
 {
@@ -20,17 +32,6 @@ Deployed:
       tokenType
       transactionType
     }
-  }
-  transactions(
-    first: 15
-  	where: {tokenType: ERC20}
-  ) {
-    id
-    from
-    to
-    value
-    tokenType
-    transactionType
   }
 }
 </pre>

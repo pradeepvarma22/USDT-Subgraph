@@ -47,7 +47,7 @@ export default function User() {
 
 
 
-            <div>
+            <div className="p-5">
                 <>
 
 
