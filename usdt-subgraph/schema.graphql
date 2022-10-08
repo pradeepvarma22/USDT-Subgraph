@@ -1,5 +1,40 @@
-type ExampleEntity @entity {
+enum ProtocolType {
+  GENERIC
+  EXCHANGE
+  BRIDGE
+  NFT_MARKET_PLACE
+  STAKING
+}
+
+enum Network {
+  MAINNET # Ethereum Mainnet
+  matic  #Polygon 
+}
+
+enum TransactionType{
+  TRANSFER
+  APPROVAL
+}
+
+enum TokenStandardType {
+  ERC1155
+  ERC721
+  ERC20
+}
+
+type UserAccount @entity {
   id: ID!
-  count: BigInt!
-  amount: BigInt! # uint256
+  address: String!
+  transaction: [Transaction!]!
+}
+
+type Transaction @entity(immutable: true) {
+  id: ID!
+  hash: String!
+  from: Bytes!
+  to: Bytes!
+  value: BigDecimal!
+  tokenType: TokenStandardType!
+  transactionType: TransactionType!
+  network: Network!
 }
