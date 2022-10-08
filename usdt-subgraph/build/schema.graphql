@@ -1,14 +1,6 @@
-enum ProtocolType {
-  GENERIC
-  EXCHANGE
-  BRIDGE
-  NFT_MARKET_PLACE
-  STAKING
-}
-
 enum Network {
   MAINNET # Ethereum Mainnet
-  matic  #Polygon 
+  MATIC  #Polygon 
 }
 
 enum TransactionType{
@@ -17,7 +9,6 @@ enum TransactionType{
 }
 
 enum TokenStandardType {
-  ERC1155
   ERC721
   ERC20
 }
@@ -30,10 +21,9 @@ type UserAccount @entity {
 
 type Transaction @entity(immutable: true) {
   id: ID!
-  hash: String!
-  from: Bytes!
-  to: Bytes!
-  value: BigDecimal!
+  from: String!
+  to: String!
+  value: BigInt!
   tokenType: TokenStandardType!
   transactionType: TransactionType!
   network: Network!

@@ -92,40 +92,31 @@ export class Transaction extends Entity {
     this.set("id", Value.fromString(value));
   }
 
-  get hash(): string {
-    let value = this.get("hash");
+  get from(): string {
+    let value = this.get("from");
     return value!.toString();
   }
 
-  set hash(value: string) {
-    this.set("hash", Value.fromString(value));
+  set from(value: string) {
+    this.set("from", Value.fromString(value));
   }
 
-  get from(): Bytes {
-    let value = this.get("from");
-    return value!.toBytes();
-  }
-
-  set from(value: Bytes) {
-    this.set("from", Value.fromBytes(value));
-  }
-
-  get to(): Bytes {
+  get to(): string {
     let value = this.get("to");
-    return value!.toBytes();
+    return value!.toString();
   }
 
-  set to(value: Bytes) {
-    this.set("to", Value.fromBytes(value));
+  set to(value: string) {
+    this.set("to", Value.fromString(value));
   }
 
-  get value(): BigDecimal {
+  get value(): BigInt {
     let value = this.get("value");
-    return value!.toBigDecimal();
+    return value!.toBigInt();
   }
 
-  set value(value: BigDecimal) {
-    this.set("value", Value.fromBigDecimal(value));
+  set value(value: BigInt) {
+    this.set("value", Value.fromBigInt(value));
   }
 
   get tokenType(): string {
