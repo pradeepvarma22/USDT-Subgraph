@@ -1,9 +1,9 @@
-# USDT-Subgraph
+# USDT Subgraph
+Dynamic UserPage Subgraph
 
 
 Deployed:
 <a href="https://thegraph.com/hosted-service/subgraph/pradeepvarma22/usdt">https://thegraph.com/hosted-service/subgraph/pradeepvarma22/usdt</a>
-
 
 ##### Ex Query:
 <pre>
